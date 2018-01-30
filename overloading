@@ -1,0 +1,67 @@
+
+package pkg123;
+import java.io.*;
+
+class Calture
+{
+    int a,b,c;
+
+    void set_value(int x,int y,int z)
+    {
+        a=x;
+        b=y;
+        c=z;
+    }
+    void show()
+    {
+        System.out.println("a= "+a+" ,b= "+b+" c= "+c);
+    }
+    void add()
+    {
+        System.out.println("a+b+c = "+(a+b+c));
+    }
+    void sub()
+    {
+        System.out.println("a*b*c = "+(a*b*c));
+    }
+    double balance()
+    {
+        return((a+b+c)/3);
+    }
+}
+
+public class Main {
+
+
+    public static void main(String[] args)throws IOException {
+        BufferedReader buf;
+        String str1,str2,str3;
+        int a,b,c;
+        
+        
+        Calture obj=new Calture();
+        System.out.println("input1:");
+        buf=new BufferedReader(new InputStreamReader(System.in));
+        str1=buf.readLine();
+        System.out.println("input2:");
+        str2=buf.readLine();
+        System.out.println("input3:");
+        str3=buf.readLine();
+        a=Integer.parseInt(str1);
+        b=Integer.parseInt(str2);
+        c=Integer.parseInt(str3);
+        obj.set_value(a,b,c);
+                
+        
+        obj.show();
+        
+        obj.add();
+        
+        obj.sub();
+        
+        System.out.println("avg = "+obj.balance());
+
+        
+        
+    }
+}
